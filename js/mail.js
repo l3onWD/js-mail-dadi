@@ -15,6 +15,8 @@ BONUS:
 /* -----------------------------------------
 * INIT
 -------------------------------------------*/
+console.log('------------------------- MAIL ------------------------- ');
+console.log('');
 
 
 //*** DATA ***//
@@ -26,13 +28,19 @@ console.log('Mails');
 console.table(mails);
 
 
+//*** DOM ELEMENTS ***//
+const mailElem = document.getElementById('mail');
+const loginElem = document.getElementById('login-btn');
+const messageElem = document.getElementById('login-message');
+
+
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
 
 
 //*** GET USER MAIL ***//
-const userMail = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
+//const userMail = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
 
 
 //*** VALIDTION ***//
