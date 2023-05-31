@@ -32,6 +32,11 @@ console.log('');
 const dices = [];
 const diceSides = 6;
 
+
+//*** DOM ELEMENTS ***//
+const playElem = document.getElementById('play-btn');
+const diceMessageElem = document.getElementById('dice-message');
+
 let gameMessage = 'La Partita inizia!\n';
 
 /* -----------------------------------------
