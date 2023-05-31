@@ -48,6 +48,7 @@ playBtnElem.addEventListener('click', function () {
 
     let gameLogMsg = 'La Partita inizia!\n';
     let rounds = '';
+    let resultMsg;
     
     //*** GAME CICLE ***//
     let hasWinner = false;
@@ -73,12 +74,14 @@ playBtnElem.addEventListener('click', function () {
         if(cpuDice > playerDice) {
 
             hasWinner = true;
-            gameLogMsg += `HAI PERSO!\n`
+            gameLogMsg += `HAI PERSO!\n`;
+            resultMsg = '<td colspan="3" class="bg-danger">HAI PERSO!</td>';
 
         }else if(cpuDice < playerDice) {
 
             hasWinner = true;
-            gameLogMsg += `HAI VINTO!\n`
+            gameLogMsg += `HAI VINTO!\n`;
+            resultMsg = '<td colspan="3" class="bg-success">HAI VINTO!</td>';
 
         } else {
 
@@ -90,6 +93,7 @@ playBtnElem.addEventListener('click', function () {
 
     //*** SHOW RESULT ***//
     roundsElem.innerHTML = rounds;
+    gameResultElem.innerHTML = resultMsg;
 
     // ! Log message
     console.log(gameLogMsg);
