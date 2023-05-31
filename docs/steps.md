@@ -31,14 +31,21 @@
 ## Esercizo Dadi
 ### Steps:
 - Creo una lista di dadi vuota [CPU, Giocatore]
-- Creo un messaggio con la vittoria della CPU
+- Creo un contenitore per i messaggi del gioco
 - [bonus] Recupero gli elementi del DOM (bottone "Gioca" e contenitore messaggio)
 - [bonus] **QUANDO** _"Clicco su Gioca"_
-    - Genero il dado della CPU e lo metto nella lista
-    - **FINCHE** _"non ho 2 numeri"_**OPPURE**_"i dadi sono uguali"_
-        - Tiro il dado del giocatore
-        - **SE** _"il numero del giocatore è più alto"_
-            - Setto il messaggio con la vittoria del giocatore
+    - Creo un flag per la fine della partita e lo setto su false
+    - **FINCHE** _"non ho un vincitore"_
+        - Tiro il dado della CPU
+        - Tiro il dado del Giocatore
+        - **SE** _"il numero della CPU è più alto"_
+            - Setto il messaggio con la vittoria della CPU
+            - Setto il flag su true
+        - **SE INVECE** _"il numero della CPU è più basso"_
+            - Setto il messaggio con la vittoria del Giocatore
+            - Setto il flag su true
+        - **ALTRIMENTI**
+            - Setto il messaggio con il pareggio
     - Stampo il messaggio
     - [bonus] Mostro il messaggio nella pagina
     - **FINE**
