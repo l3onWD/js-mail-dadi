@@ -50,6 +50,7 @@ playBtnElem.addEventListener('click', function () {
     let rounds = '';
     let resultMsg;
     
+
     //*** GAME CICLE ***//
     let hasWinner = false;
     for (let i = 0; !hasWinner; i++) {
@@ -70,6 +71,7 @@ playBtnElem.addEventListener('click', function () {
         gameLogMsg += `Il tuo Dado: ${playerDice}\n`;
         rounds += `<td class="text-center">${playerDice}</td></tr>`;
 
+        
         //*** CHECK WINNERS ***//
         if(cpuDice > playerDice) {
 
@@ -94,6 +96,7 @@ playBtnElem.addEventListener('click', function () {
     //*** SHOW RESULT ***//
     roundsElem.innerHTML = rounds;
     gameResultElem.innerHTML = resultMsg;
+    gameTableElem.classList.remove('d-none');
 
     // ! Log message
     console.log(gameLogMsg);
