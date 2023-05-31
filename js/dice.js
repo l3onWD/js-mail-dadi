@@ -46,45 +46,53 @@ const gameResultElem = document.getElementById('game-result');
 //*** CLICK PLAY BUTTON ***//
 playBtnElem.addEventListener('click', function () {
 
-    let gameLogMsg = 'La Partita inizia!';
-    let rounds = '<tr>';
+    let gameLogMsg = 'La Partita inizia!\n';
+    let rounds = '';
     
     //*** GAME CICLE ***//
     let hasWinner = false;
     for (let i = 0; !hasWinner; i++) {
 
+
+        //*** GET ROUND NUMBER ***//
+        rounds += `<tr><td>${i}</td>`;
+
+
         //*** GENERATE DICES ***//
         // Generate CPU dice
         const cpuDice = Math.floor(Math.random() * diceSides) + 1;
-        gameLogMsg += `Dado CPU: ${cpuDice}`;
+        gameLogMsg += `Dado CPU: ${cpuDice}\n`;
+        rounds += `<td class="text-center">${cpuDice}</td>`;
 
         // Generate Player dice
         const playerDice = Math.floor(Math.random() * diceSides) + 1;
-        gameLogMsg += `Il tuo Dado: ${playerDice}`;
+        gameLogMsg += `Il tuo Dado: ${playerDice}\n`;
+        rounds += `<td class="text-center">${playerDice}</td></tr>`;
 
         //*** CHECK WINNERS ***//
         if(cpuDice > playerDice) {
 
             hasWinner = true;
-            gameLogMsg += `HAI PERSO!`
+            gameLogMsg += `HAI PERSO!\n`
 
         }else if(cpuDice < playerDice) {
 
             hasWinner = true;
-            gameLogMsg += `HAI VINTO!`
+            gameLogMsg += `HAI VINTO!\n`
 
         } else {
 
-            gameLogMsg += `Hai Pareggiato! I dadi vengono rilanciati.`
+            gameLogMsg += `Hai Pareggiato! I dadi vengono rilanciati.\n`
 
         }
     }
 
 
-    //*** SHOW MESSAGE ***//
-    diceMessageElem.innerHTML = gameLogMsg;
+    //*** SHOW RESULT ***//
+    roundsElem.innerHTML = rounds;
 
     // ! Log message
     console.log(gameLogMsg);
+    console.log('');
 
 });
