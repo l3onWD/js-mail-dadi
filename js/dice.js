@@ -33,8 +33,10 @@ const diceSides = 6;
 
 
 //*** DOM ELEMENTS ***//
-const playElem = document.getElementById('play-btn');
-const diceMessageElem = document.getElementById('dice-message');
+const playBtnElem = document.getElementById('play-btn');
+const gameTableElem = document.getElementById('game-table');
+const roundsElem = document.getElementById('rounds-container');
+const gameResultElem = document.getElementById('game-result');
 
 
 /* -----------------------------------------
@@ -42,9 +44,10 @@ const diceMessageElem = document.getElementById('dice-message');
 -------------------------------------------*/
 
 //*** CLICK PLAY BUTTON ***//
-playElem.addEventListener('click', function () {
+playBtnElem.addEventListener('click', function () {
 
-    let gameMessage = '<p>La Partita inizia!</p>';
+    let gameLogMsg = 'La Partita inizia!';
+    let rounds = '<tr>';
     
     //*** GAME CICLE ***//
     let hasWinner = false;
@@ -53,35 +56,35 @@ playElem.addEventListener('click', function () {
         //*** GENERATE DICES ***//
         // Generate CPU dice
         const cpuDice = Math.floor(Math.random() * diceSides) + 1;
-        gameMessage += `<p>Dado CPU: ${cpuDice}</p>`;
+        gameLogMsg += `Dado CPU: ${cpuDice}`;
 
         // Generate Player dice
         const playerDice = Math.floor(Math.random() * diceSides) + 1;
-        gameMessage += `<p>Il tuo Dado: ${playerDice}</p>`;
+        gameLogMsg += `Il tuo Dado: ${playerDice}`;
 
         //*** CHECK WINNERS ***//
         if(cpuDice > playerDice) {
 
             hasWinner = true;
-            gameMessage += `<p>HAI PERSO!</p>`
+            gameLogMsg += `HAI PERSO!`
 
         }else if(cpuDice < playerDice) {
 
             hasWinner = true;
-            gameMessage += `<p>HAI VINTO!!!</p>`
+            gameLogMsg += `HAI VINTO!`
 
         } else {
 
-            gameMessage += `<p>Hai Pareggiato! I dadi vengono rilancaiti</p>`
+            gameLogMsg += `Hai Pareggiato! I dadi vengono rilanciati.`
 
         }
     }
 
 
     //*** SHOW MESSAGE ***//
-    diceMessageElem.innerHTML = gameMessage;
+    diceMessageElem.innerHTML = gameLogMsg;
 
     // ! Log message
-    console.log(gameMessage);
+    console.log(gameLogMsg);
 
 });

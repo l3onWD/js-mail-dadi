@@ -71,8 +71,8 @@
                 <!-- Form -->
                 <button id="play-btn" class="btn btn-primary mb-5">Tira i dadi</button>
 
-                <!-- Rounds Container -->
-                <table id="rounds-table" class="table table-striped">
+                <!-- Rounds -->
+                <table id="game-table" class="table table-striped">
 
                     <thead>
                         <tr>
@@ -82,7 +82,7 @@
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="rounds-container">
                         <tr>
                             <td>1</td>
                             <td class="text-center">6</td>
@@ -97,7 +97,7 @@
 
                     <tfoot>
                         <tr>
-                            <td colspan="3" class="bg-success text-center fs-5 fw-bold">HAI VINTO!</td>
+                            <td id="game-result" colspan="3" class="bg-success text-center fs-5 fw-bold">HAI VINTO!</td>
                         </tr>
                     </tfoot>
                 </table>
