@@ -60,17 +60,46 @@
             <!-- Dice Container -->
             <div class="bg-white rounded p-3 my-5">
                 <!-- Title -->
-                <h2 class="mb-3">Gioco dei Dadi</h2>
+                <h2 class="mb-4">Gioco dei Dadi</h2>
 
-                <p>
-
-                </p>
+                <h5>Regole del gioco:</h5>
+                <ul class="mb-4">
+                    <li>Tira i dadi, se il tuo numero è maggiore di quello del computer hai vinto.</li>
+                    <li>In caso di pareggio viene fatto un altro round.</li>
+                </ul>
 
                 <!-- Form -->
-                <button id="play-btn" class="btn btn-danger mb-3">Gioca</button>
+                <button id="play-btn" class="btn btn-danger mb-5">Tira i dadi</button>
 
                 <!-- Message -->
-                <div id="dice-message"></div>
+                <div id="dice-message">
+                    <div class="card text-center mb-3">
+                        <div class="card-header">
+                            <h5 class="card-titler">Round 1</h5>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="row">
+
+                                <div class="col-6">
+                                    <p>Dado del Computer:</p>
+                                    <p class="fs-1">6</p>
+                                </div>
+
+                                <div class="col-6">
+                                    <p>Dado del Giocatore:</p>
+                                    <p class="fs-1">6</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer bg-warning">
+                            HAI PAREGGIATO!
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </main>
