@@ -37,6 +37,21 @@ let message = 'La mail inserita non è corretta, non puoi accedere!';
 console.log('----------- LOGIC -----------');
 
 
+//*** GET USER MAIL ***//
+const mailInput = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
+
+
+//*** VALIDTION ***//
+let isValid = mailInput.length > 3;
+
+
+//*** LOGIN ***//
+if (!isValid) {
+    // ! Log Error
+    console.log('#ERRORE: La mail deve avere almeno 3 caratteri!');
+} else {
+    
+}
 
 
 console.log('----------- DONE -----------');
