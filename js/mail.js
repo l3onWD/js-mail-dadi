@@ -13,17 +13,8 @@ BONUS:
 */
 
 /* -----------------------------------------
-! DEBUG
--------------------------------------------*/
-console.log('----------- DEBUG -----------');
-
-console.log('JS OK!');// Check if JS is linked to the page
-
-
-/* -----------------------------------------
 * INIT
 -------------------------------------------*/
-console.log('----------- INIT -----------');
 
 
 //*** DATA ***//
@@ -32,13 +23,12 @@ let message = 'La mail inserita non è corretta, non puoi accedere!';
 
 // ! Log Data
 console.log('Mails');
-console.log(mails);
+console.table(mails);
 
 
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
-console.log('----------- LOGIC -----------');
 
 
 //*** GET USER MAIL ***//
@@ -50,7 +40,7 @@ let isValid = userMail.length > 3;
 
 
 if (!isValid) {
-    
+
     // ! Log Error
     console.log('#ERRORE: La mail deve avere almeno 3 caratteri!');
 
@@ -67,10 +57,12 @@ if (!isValid) {
         // Check user mail
         if (userMail === mail) {
             found = true;
-            message = `Benvenuto ${userMail}`;
+            message = `Login avvenuto con successo! Benvenuto ${userMail}`;
         }
     }
+
+
+    //*** SHOW MESSAGE ***//
+    // ! Log Error
+    console.log(message);
 }
-
-
-console.log('----------- DONE -----------');
