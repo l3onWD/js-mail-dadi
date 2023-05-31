@@ -37,8 +37,6 @@ const diceSides = 6;
 const playElem = document.getElementById('play-btn');
 const diceMessageElem = document.getElementById('dice-message');
 
-let gameMessage = 'La Partita inizia!\n';
-
 
 /* -----------------------------------------
 * LOGIC
@@ -47,6 +45,8 @@ let gameMessage = 'La Partita inizia!\n';
 //*** CLICK PLAY BUTTON ***//
 playElem.addEventListener('click', function () {
 
+    let gameMessage = 'La Partita inizia!\n';
+    
     //*** GAME CICLE ***//
     let hasWinner = false;
     for (let i = 0; !hasWinner; i++) {
@@ -80,6 +80,8 @@ playElem.addEventListener('click', function () {
 
 
     //*** SHOW MESSAGE ***//
+    diceMessageElem.innerText = gameMessage;
+
     // ! Log message
     console.log(gameMessage);
 
