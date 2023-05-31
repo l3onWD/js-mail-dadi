@@ -23,37 +23,48 @@
         <title>Mail e Dadi</title>
         
     </head>
-    <body>
+    <body class="bg-success">
         
-        <main class="container bg-light">
+        <main class="container">
 
             <!-- Mail container -->
-            <div class="bg-white p-3 rounded mb-5">
+            <div class="bg-white rounded p-3 my-5">
 
                 <!-- Title -->
-                <h2 class="mb-3">Mail Login</h2>
+                <h2 class="mb-4">Mail Login</h2>
 
                 <!-- Form -->
                 <div class="row">
 
-                    <div class="col-8">
-                        <input type="email" class="form-control mb-3" id="mail" placeholder="name@example.com">
+                    <!-- Form -->
+                    <div class="col-12 col-md-8">
+                        <label for="mail" class="form-label">Inserisci la tua mail:</label>
+                        <input id="mail" type="email" class="form-control mb-4" placeholder="name@example.com">
+
+                        <button id="login-btn" class="btn btn-primary mb-3">Login</button>
+
+                        <!-- Message -->
+                        <div id="login-message" class="alert"></div>
                     </div>
 
-                    <div class="col-4">
-                        <button id="login-btn" class="btn btn-primary mb-3">Login</button>
+                    <!-- Image -->
+                    <div class="col-12 col-md-4">
+                        <img src="https://picsum.photos/id/1/800/800" alt="Notebook" class="img-fluid rounded d-none d-md-inline">
                     </div>
 
                 </div>
 
-                <!-- Message -->
-                <p id="login-message"></p>
             </div>
 
+
             <!-- Dice Container -->
-            <div class="bg-white p-3 rounded">
+            <div class="bg-white rounded p-3 my-5">
                 <!-- Title -->
-                <h2 class="mb-3">Dadi</h2>
+                <h2 class="mb-3">Gioco dei Dadi</h2>
+
+                <p>
+
+                </p>
 
                 <!-- Form -->
                 <button id="play-btn" class="btn btn-danger mb-3">Gioca</button>
