@@ -49,8 +49,21 @@ for (let i = 0; !hasWinner; i++) {
     const playerDice = Math.floor(Math.random() * diceSides) + 1;
     gameMessage += `Il tuo Dado: ${playerDice}\n`;
 
-    // ! DEBUG
-    console.log(gameMessage);
-    hasWinner = true;
+     //*** CHECK WINNERS ***//
+     if(cpuDice > playerDice) {
+
+        hasWinner = true;
+        gameMessage += `HAI PERSO!\n`
+
+    }else if(cpuDice < playerDice) {
+
+        hasWinner = true;
+        gameMessage += `HAI VINTO!!!\n`
+
+    } else {
+
+        gameMessage += `Hai Pareggiato! I dadi vengono rilancaiti\n`
+
+    }
 }
 
