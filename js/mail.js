@@ -77,6 +77,7 @@ loginElem.addEventListener('click', function () {
 
 
         //*** SHOW MESSAGE ***//
+        messageElem.innerText = message;
 
         // ! Log Error
         console.log(message);
