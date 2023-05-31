@@ -45,7 +45,7 @@ const diceMessageElem = document.getElementById('dice-message');
 //*** CLICK PLAY BUTTON ***//
 playElem.addEventListener('click', function () {
 
-    let gameMessage = 'La Partita inizia!\n';
+    let gameMessage = '<p>La Partita inizia!</p>';
     
     //*** GAME CICLE ***//
     let hasWinner = false;
@@ -54,33 +54,33 @@ playElem.addEventListener('click', function () {
         //*** GENERATE DICES ***//
         // Generate CPU dice
         const cpuDice = Math.floor(Math.random() * diceSides) + 1;
-        gameMessage += `Dado CPU: ${cpuDice}\n`;
+        gameMessage += `<p>Dado CPU: ${cpuDice}</p>`;
 
         // Generate Player dice
         const playerDice = Math.floor(Math.random() * diceSides) + 1;
-        gameMessage += `Il tuo Dado: ${playerDice}\n`;
+        gameMessage += `<p>Il tuo Dado: ${playerDice}</p>`;
 
         //*** CHECK WINNERS ***//
         if(cpuDice > playerDice) {
 
             hasWinner = true;
-            gameMessage += `HAI PERSO!\n`
+            gameMessage += `<p>HAI PERSO!</p>`
 
         }else if(cpuDice < playerDice) {
 
             hasWinner = true;
-            gameMessage += `HAI VINTO!!!\n`
+            gameMessage += `<p>HAI VINTO!!!</p>`
 
         } else {
 
-            gameMessage += `Hai Pareggiato! I dadi vengono rilancaiti\n`
+            gameMessage += `<p>Hai Pareggiato! I dadi vengono rilancaiti</p>`
 
         }
     }
 
 
     //*** SHOW MESSAGE ***//
-    diceMessageElem.innerText = gameMessage;
+    diceMessageElem.innerHTML = gameMessage;
 
     // ! Log message
     console.log(gameMessage);
