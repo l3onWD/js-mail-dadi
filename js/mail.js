@@ -38,7 +38,6 @@ const messageElem = document.getElementById('login-message');
 * LOGIC
 -------------------------------------------*/
 
-
 //*** GET USER MAIL ***//
 //const userMail = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
 
