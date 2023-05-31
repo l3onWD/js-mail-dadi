@@ -27,7 +27,8 @@ const loginMsgElem = document.getElementById('login-message');
 loginElem.addEventListener('click', function () {
     
     //*** CREATE LOGIN MESSAGE ***//
-    let loginMsg = '<p class="alert alert-danger">La mail inserita non è corretta, non puoi accedere!</p>';
+    let logMsg = 'La mail inserita non è corretta, non puoi accedere!';
+    let loginMsg = `<p class="alert alert-danger">${logMsg}</p>`;
 
 
     //*** GET USER MAIL ***//
@@ -46,7 +47,8 @@ loginElem.addEventListener('click', function () {
         mailElem.classList.add('is-invalid');
 
         // Update login message
-        loginMsg = '<p class="alert alert-danger">La mail deve avere almeno 3 caratteri!</p>';
+        logMsg = 'La mail deve avere almeno 3 caratteri!';
+        loginMsg = `<p class="alert alert-danger">${logMsg}</p>`;
 
 
     } else {
@@ -66,7 +68,8 @@ loginElem.addEventListener('click', function () {
             // Check user mail
             if (userMail === mail) {
                 found = true;
-                loginMsg = `<p class="alert alert-success">Login avvenuto con successo! Benvenuto ${userMail}</p>`;
+                logMsg = `Login avvenuto con successo! Benvenuto ${userMail}`;
+                loginMsg = `<p class="alert alert-success">${logMsg}</p>`;
             }
         }
 
@@ -78,6 +81,6 @@ loginElem.addEventListener('click', function () {
     loginMsgElem.innerHTML = loginMsg;
 
     // ! Log Result
-    console.log(loginMsg);
+    console.log(logMsg);
 
 });
