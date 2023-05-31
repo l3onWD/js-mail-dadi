@@ -25,9 +25,24 @@ BONUS:
 -------------------------------------------*/
 
 
-//***  ***//
+//*** DATA ***//
+const dices = [];
+const diceSides = 6;
+
+let message = 'Hai perso!';
 
 
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
+
+
+//*** GENERATE CPU DICE ***//
+// Generate dice
+const cpuDice = Math.floor(Math.random() * diceSides) + 1;
+
+// Save dice inside the list
+dices.push(cpuDice);
+
+// ! Log CPU Dice
+console.log('Dado del Computer: ' + cpuDice);
