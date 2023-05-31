@@ -29,20 +29,28 @@ BONUS:
 const dices = [];
 const diceSides = 6;
 
-let message = 'Hai perso!';
-
+let gameMessage = 'La Partita inizia!\n';
 
 /* -----------------------------------------
 * LOGIC
 -------------------------------------------*/
 
 
-//*** GENERATE CPU DICE ***//
-// Generate dice
-const cpuDice = Math.floor(Math.random() * diceSides) + 1;
+//*** GAME CICLE ***//
+let hasWinner = false;
+for (let i = 0; !hasWinner; i++) {
 
-// Save dice inside the list
-dices.push(cpuDice);
+    //*** GENERATE DICES ***//
+    // Generate CPU dice
+    const cpuDice = Math.floor(Math.random() * diceSides) + 1;
+    gameMessage += `Dado CPU: ${cpuDice}\n`;
 
-// ! Log CPU Dice
-console.log('Dado del Computer: ' + cpuDice);
+    // Generate Player dice
+    const playerDice = Math.floor(Math.random() * diceSides) + 1;
+    gameMessage += `Il tuo Dado: ${playerDice}\n`;
+
+    // ! DEBUG
+    console.log(gameMessage);
+    hasWinner = true;
+}
+
