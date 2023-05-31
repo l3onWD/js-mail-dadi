@@ -23,3 +23,12 @@
 
 ## Esercizo Dadi
 ### Steps:
+- Creo una lista di dadi vuota [CPU, Giocatore]
+- Creo un messaggio con la vittoria della CPU
+- Genero il dado della CPU e lo metto nella lista
+- **FINCHE** _"non ho 2 numeri"_**OPPURE**_"i dadi sono uguali"_
+    - Tiro il dado del giocatore
+    - **SE** _"il numero del giocatore è più alto"_
+        - Setto il messaggio con la vittoria del giocatore
+- Stampo il messaggio
+- **FINE**
