@@ -49,8 +49,8 @@ for (let i = 0; !hasWinner; i++) {
     const playerDice = Math.floor(Math.random() * diceSides) + 1;
     gameMessage += `Il tuo Dado: ${playerDice}\n`;
 
-     //*** CHECK WINNERS ***//
-     if(cpuDice > playerDice) {
+    //*** CHECK WINNERS ***//
+    if(cpuDice > playerDice) {
 
         hasWinner = true;
         gameMessage += `HAI PERSO!\n`
@@ -67,3 +67,7 @@ for (let i = 0; !hasWinner; i++) {
     }
 }
 
+
+//*** SHOW MESSAGE ***//
+// ! Log message
+console.log(gameMessage);
