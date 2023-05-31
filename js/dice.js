@@ -29,7 +29,6 @@ console.log('');
 
 
 //*** DATA ***//
-const dices = [];
 const diceSides = 6;
 
 
