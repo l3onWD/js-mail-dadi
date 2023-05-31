@@ -65,41 +65,44 @@
                 <h5>Regole del gioco:</h5>
                 <ul class="mb-4">
                     <li>Tira i dadi, se il tuo numero è maggiore di quello del computer hai vinto.</li>
-                    <li>In caso di pareggio viene fatto un altro round.</li>
+                    <li>In caso di pareggio i dadi vengono lanciati ancora per un altro round.</li>
                 </ul>
 
                 <!-- Form -->
-                <button id="play-btn" class="btn btn-danger mb-5">Tira i dadi</button>
+                <button id="play-btn" class="btn btn-primary mb-5">Tira i dadi</button>
 
-                <!-- Message -->
-                <div id="dice-message">
-                    <div class="card text-center mb-3">
-                        <div class="card-header">
-                            <h5 class="card-titler">Round 1</h5>
-                        </div>
-                        <div class="card-body">
+                <!-- Rounds Container -->
+                <table id="rounds-table" class="table table-striped">
 
-                            <div class="row">
+                    <thead>
+                        <tr>
+                            <th>Round #</th>
+                            <th class="text-center">Computer</th>
+                            <th class="text-center">Giocatore</th>
+                        </tr>
+                    </thead>
 
-                                <div class="col-6">
-                                    <p>Dado del Computer:</p>
-                                    <p class="fs-1">6</p>
-                                </div>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="text-center">6</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">6</td>
+                        </tr>
+                    </tbody>
 
-                                <div class="col-6">
-                                    <p>Dado del Giocatore:</p>
-                                    <p class="fs-1">6</p>
-                                </div>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="bg-success text-center fs-5 fw-bold">HAI VINTO!</td>
+                        </tr>
+                    </tfoot>
+                </table>
 
-                            </div>
-
-                        </div>
-
-                        <div class="card-footer bg-warning">
-                            HAI PAREGGIATO!
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
         </main>
