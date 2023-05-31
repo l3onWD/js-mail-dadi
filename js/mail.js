@@ -38,38 +38,48 @@ const messageElem = document.getElementById('login-message');
 * LOGIC
 -------------------------------------------*/
 
-//*** GET USER MAIL ***//
-//const userMail = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
+//*** CLICK LOGIN BUTTON ***//
+loginElem.addEventListener('click', function () {
 
 
-//*** VALIDTION ***//
-let isValid = userMail.length > 3;
+    //*** GET USER MAIL ***//
+    //const userMail = prompt('Inserisci la tua mail', 'mario.rossi@mail.com').trim();
+    const userMail = mailElem.value.trim();
 
 
-if (!isValid) {
+    //*** VALIDTION ***//
+    let isValid = userMail.length > 3;
 
-    // ! Log Error
-    console.log('#ERRORE: La mail deve avere almeno 3 caratteri!');
 
-} else {
+    if (!isValid) {
 
-    //*** LOGIN CHECK ***//
-    let found = false;
+        alert('La mail deve avere almeno 3 caratteri!');
 
-    // Cicle through mails
-    for(let i = 0; !found && i < mails.length; i++) {
+        // ! Log Error
+        console.log('#ERRORE: La mail deve avere almeno 3 caratteri!');
 
-        const mail = mails[i];
+    } else {
 
-        // Check user mail
-        if (userMail === mail) {
-            found = true;
-            message = `Login avvenuto con successo! Benvenuto ${userMail}`;
+        //*** LOGIN CHECK ***//
+        let found = false;
+
+        // Cicle through mails
+        for(let i = 0; !found && i < mails.length; i++) {
+
+            const mail = mails[i];
+
+            // Check user mail
+            if (userMail === mail) {
+                found = true;
+                message = `Login avvenuto con successo! Benvenuto ${userMail}`;
+            }
         }
+
+
+        //*** SHOW MESSAGE ***//
+
+        // ! Log Error
+        console.log(message);
     }
 
-
-    //*** SHOW MESSAGE ***//
-    // ! Log Error
-    console.log(message);
-}
+});
