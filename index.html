@@ -67,30 +67,33 @@
                 <!-- Form -->
                 <button id="play-btn" class="btn btn-primary mb-5">Tira i dadi</button>
 
-                <!-- Rounds -->
-                <table id="game-table" class="table table-striped d-none">
+                <!-- Game Container -->
+                <div id="game-container" class="d-none">
 
-                    <thead>
-                        <tr>
-                            <th>Round #</th>
-                            <th class="text-center">Computer</th>
-                            <th class="text-center">Giocatore</th>
-                        </tr>
-                    </thead>
+                    <!-- Rounds Table -->
+                    <table class="table table-striped">
 
-                    <!-- Rounds Container -->
-                    <tbody id="rounds-container">
-                        
-                    </tbody>
+                        <thead>
+                            <tr>
+                                <th>Round #</th>
+                                <th class="text-center">Computer</th>
+                                <th class="text-center">Giocatore</th>
+                            </tr>
+                        </thead>
 
-                    <!-- Game Result -->
-                    <tfoot>
-                        <tr id="game-result" class="text-center fs-5 fw-bold">
+                        <!-- Rounds Container -->
+                        <tbody id="rounds-container">
                             
-                        </tr>
-                    </tfoot>
-                </table>
+                        </tbody>
 
+                    </table>
+                    
+                    <!-- Game Result -->
+                    <div id="game-result" class="text-center fs-5 fw-bold">
+                        
+                    </div>
+
+                </div>
                 
             </div>
 

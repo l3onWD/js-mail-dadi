@@ -12,7 +12,7 @@ const diceSides = 6;
 
 //*** DOM ELEMENTS ***//
 const playBtnElem = document.getElementById('play-btn');
-const gameTableElem = document.getElementById('game-table');
+const gameContainerElem = document.getElementById('game-container');
 const roundsElem = document.getElementById('rounds-container');
 const gameResultElem = document.getElementById('game-result');
 
@@ -55,13 +55,13 @@ playBtnElem.addEventListener('click', function () {
 
             hasWinner = true;
             gameLogMsg += `HAI PERSO!\n`;
-            resultMsg = '<td colspan="3" class="bg-danger">HAI PERSO!</td>';
+            resultMsg = '<div class="bg-danger">HAI PERSO!</div>';
 
         }else if(cpuDice < playerDice) {
 
             hasWinner = true;
             gameLogMsg += `HAI VINTO!\n`;
-            resultMsg = '<td colspan="3" class="bg-success">HAI VINTO!</td>';
+            resultMsg = '<div class="bg-success">HAI VINTO!</div>';
 
         } else {
 
@@ -74,7 +74,7 @@ playBtnElem.addEventListener('click', function () {
     //*** SHOW RESULT ***//
     roundsElem.innerHTML = rounds;
     gameResultElem.innerHTML = resultMsg;
-    gameTableElem.classList.remove('d-none');
+    gameContainerElem.classList.remove('d-none');
 
     // ! Log message
     console.log(gameLogMsg);
