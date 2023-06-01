@@ -51,19 +51,22 @@ playBtnElem.addEventListener('click', function () {
 
         
         //*** CHECK WINNERS ***//
-        if(cpuDice > playerDice) {
+        // CPU Win
+        if (cpuDice > playerDice) {
 
             hasWinner = true;
             gameLogMsg += `HAI PERSO!\n`;
             resultMsg = '<div class="bg-danger">HAI PERSO!</div>';
 
-        }else if(cpuDice < playerDice) {
+        }// Player Win
+        else if (cpuDice < playerDice) {
 
             hasWinner = true;
             gameLogMsg += `HAI VINTO!\n`;
             resultMsg = '<div class="bg-success">HAI VINTO!</div>';
 
-        } else {
+        } // Draw 
+        else {
 
             gameLogMsg += `Hai Pareggiato! I dadi vengono rilanciati.\n`
 
